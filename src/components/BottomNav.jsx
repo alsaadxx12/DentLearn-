@@ -16,8 +16,8 @@ export default function BottomNav() {
 
     const userNav = [
         { to: '/', icon: Home, label: t('home') },
-        { to: '/wallet', icon: Wallet, label: t('wallet') },
         { to: '/cart', icon: ShoppingCart, label: t('cart'), badge: cartCount },
+        { to: '/wallet', icon: Wallet, label: t('wallet') },
         { to: '/profile', icon: CircleUserRound, label: t('myAccount') },
     ];
 
@@ -32,25 +32,21 @@ export default function BottomNav() {
 
     return (
         <nav className="bottom-nav">
-            <div className="nav-track">
-                {navItems.map(item => {
-                    const Icon = item.icon;
-                    const isActive = location.pathname === item.to;
-                    return (
-                        <NavLink key={item.to} to={item.to} className={`nav-item ${isActive ? 'active' : ''}`}>
-                            <div className="nav-icon-container">
-                                {isActive && <div className="nav-active-bg" />}
-                                <Icon size={21} strokeWidth={isActive ? 2.3 : 1.5} />
-                            </div>
+            {navItems.map(item => {
+                const Icon = item.icon;
+                const isActive = location.pathname === item.to;
+                return (
+                    <NavLink key={item.to} to={item.to} className={`nav-item ${isActive ? 'active' : ''}`}>
+                        <div className="nav-icon-wrap">
+                            <Icon size={22} strokeWidth={isActive ? 2.2 : 1.5} />
                             {item.badge > 0 && (
-                                <span className="nav-badge">
-                                    {item.badge}
-                                </span>
+                                <span className="nav-badge">{item.badge}</span>
                             )}
-                        </NavLink>
-                    );
-                })}
-            </div>
+                        </div>
+                        <span className="nav-label">{item.label}</span>
+                    </NavLink>
+                );
+            })}
         </nav>
     );
 }
