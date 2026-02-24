@@ -225,6 +225,12 @@ export const translations = {
         statusCompleted: 'مكتمل',
         statusPending: 'معلق',
         statusRefunded: 'مسترجع',
+        adminLogin: 'دخول المدير',
+        adminLoginSubtitle: 'أدخل بيانات حساب المدير',
+        adminLoginError: 'البريد أو كلمة المرور غير صحيحة',
+        password: 'كلمة المرور',
+        backToUserLogin: 'العودة لتسجيل دخول المستخدم',
+        or: 'أو',
     },
 
     en: {
@@ -453,5 +459,11 @@ export const translations = {
         statusCompleted: 'Completed',
         statusPending: 'Pending',
         statusRefunded: 'Refunded',
+        adminLogin: 'Admin Login',
+        adminLoginSubtitle: 'Enter admin credentials',
+        adminLoginError: 'Incorrect email or password',
+        password: 'Password',
+        backToUserLogin: 'Back to user login',
+        or: 'or',
     }
 };

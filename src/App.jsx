@@ -20,7 +20,7 @@ import AdminLayout from './admin/AdminLayout';
 import DashboardPage from './admin/pages/DashboardPage';
 
 // وضع التطوير - تجاوز تسجيل الدخول
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 function UserApp() {
   return (
